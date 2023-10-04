@@ -3,7 +3,7 @@
 
 void Lexer::advance(){
     this->pos += 1;  
-    if(this->pos < sizeof(this->content)/sizeof(char)){
+    if(this->pos < int(sizeof(this->content))/sizeof(char)){
         this->curr_ch = this->content[pos];
         return;
     }

@@ -3,7 +3,7 @@
 
 void Parser::advance(){
     this->token_index += 1;
-    if(this->token_index < this->TT.size()){
+    if(this->token_index < int(this->TT.size())){
         this->current_token = this->TT[this->token_index];
     }
 }

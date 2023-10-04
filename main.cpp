@@ -6,6 +6,7 @@ int main(int argc, char* argv[]){
 
     if(argc < 2){
         std::cout << "Need the source file." << std::endl;
+        return EXIT_FAILURE;
     }
     Lexer l1(argv[1]);
     l1.make_vector();
@@ -18,5 +19,5 @@ int main(int argc, char* argv[]){
 
     Bi_Op_Node node1(left, op, right);
     std::cout << node1.represent() << std::endl;
-    return 0;
+    return EXIT_SUCCESS;
 }
